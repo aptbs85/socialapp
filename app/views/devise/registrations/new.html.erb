@@ -12,6 +12,12 @@
     <%= f.label :email %><br />
     <%= f.email_field :email %>
   </div>
+  
+  <div class="field">
+    <%= f.label :date_of_birth %><br />
+    <%= f.date_select :date_of_birth, order: [:day, :month, :year], :end_year => Date.today.year - 101, :start_year => Date.today.year - 18 %>
+  </div>
+
 
   <div class="field">
     <%= f.label :password %>
