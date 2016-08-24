@@ -15,9 +15,18 @@
   
   <div class="field">
     <%= f.label :date_of_birth %><br />
-    <%= f.date_select :date_of_birth, order: [:day, :month, :year], :end_year => Date.today.year - 101, :start_year => Date.today.year - 18 %>
+    <%= f.date_select :date_of_birth, order: [:day, :month, :year], :end_year => Date.today.year - 100, :start_year => Date.today.year - 18 %>
   </div>
-
+  
+  <div class="field">
+    <%= f.radio_button :is_male, '1' %> <%= f.label :is_male, "Male" %>
+    <%= f.radio_button :is_male, '0' %> <%= f.label :is_male, "Female" %>
+  </div>
+  
+  <div class="field">
+    <%= f.radio_button :looking_for_female, '1' %> <%= f.label :looking_for_female, "Female" %>
+    <%= f.radio_button :looking_for_female, '0' %> <%= f.label :looking_for_female, "Male" %>
+  </div>
 
   <div class="field">
     <%= f.label :password %>
